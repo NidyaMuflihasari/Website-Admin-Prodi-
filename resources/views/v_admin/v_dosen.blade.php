@@ -1,7 +1,7 @@
 @extends('templatesAdmin.v_templateAdmin')
 @section('judul','Dosen')
 @section('content')
-<a href="/dosen/add"class="btn btn-primary btn-sm">Tambah</a><br>
+<a href="/dosen/add"class="btn btn-primary btn-sm">Tambah</a><br><br>
 
     @if(session('pesan'))
     <div class="alert alert-success alert-dismissible">

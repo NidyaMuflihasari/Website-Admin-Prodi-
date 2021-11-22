@@ -46,6 +46,7 @@
                 </div>
 
                 <div class='form-group'>
+                    <a href="/data-kategoripengumuman"class="btn btn-primary btn-sm">Kategori Pengumuman</a>
                     <button class='btn btn-primary btn-sm'>Simpan</button>
                 </div>
 

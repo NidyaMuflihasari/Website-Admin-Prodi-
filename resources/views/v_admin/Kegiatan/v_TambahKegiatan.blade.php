@@ -1,6 +1,7 @@
 @extends('templatesAdmin.v_templateAdmin')
 @section('judul','Tambah Kegiatan')
 @section('content')
+
 <form action="/insert-kegiatan/store" method="POST" enctype="multipart/form-data">
     @csrf
     <div class='content'>
@@ -65,6 +66,7 @@
                 </div>
 
                 <div class='form-group'>
+                    <a href="/data-kategorikegiatan"class="btn btn-primary btn-sm">Kategori Kegiatan</a>
                     <button class='btn btn-primary btn-sm'>Simpan</button>
                 </div>
 

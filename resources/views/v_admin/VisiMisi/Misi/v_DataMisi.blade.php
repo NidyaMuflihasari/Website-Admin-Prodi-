@@ -1,5 +1,5 @@
 <h2>Misi</h2>
-<a href="/tambah-misi/createMisi"class="btn btn-primary btn-sm">Tambah</a><br>
+<a href="/tambah-misi/createMisi"class="btn btn-primary btn-sm">Tambah</a><br><br>
 <table class='table table-bordered'>
     <thead>
          <tr>

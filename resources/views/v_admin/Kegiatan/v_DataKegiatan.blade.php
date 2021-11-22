@@ -1,8 +1,7 @@
 @extends('templatesAdmin.v_templateAdmin')
 @section('judul','Kegiatan')
 @section('content')
-<a href="/tambah-kegiatan/create"class="btn btn-primary btn-sm">Tambah Kegiatan</a>
-<a href="/data-kategorikegiatan"class="btn btn-primary float-right btn-sm">Kategori Kegiatan</a><br><br>
+<a href="/tambah-kegiatan/create"class="btn btn-primary btn-sm">Tambah Kegiatan</a><br><br>
 
      @if(session('pesan'))
     <div class="alert alert-success alert-dismissible">

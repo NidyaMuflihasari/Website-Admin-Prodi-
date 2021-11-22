@@ -33,6 +33,8 @@
             @endforeach
         </tbody>
     </table>
+  
+<a href="/tambah-akademik/create"class="btn btn-success float-right btn-sm">Kembali</a>
 
     @foreach ($data_kategoriaka as $data)
     <div class="modal fade" id="hapus{{ $data->id}}">

@@ -1,6 +1,8 @@
 @extends('templatesAdmin.v_templateAdmin')
 @section('judul','Tambah Akademik')
 @section('content')
+
+
 <form action="/insert-akademik/store" method="POST" enctype="multipart/form-data">
     @csrf
     <div class='content'>
@@ -46,6 +48,7 @@
                 </div>
 
                 <div class='form-group'>
+                    <a href="/data-kategoriakademik"class="btn btn-primary btn-sm">Kategori Akademik</a>
                     <button class='btn btn-primary btn-sm'>Simpan</button>
                 </div>
 

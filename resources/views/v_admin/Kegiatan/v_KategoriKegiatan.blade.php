@@ -34,6 +34,8 @@
         </tbody>
     </table>
 
+<a href="/tambah-kegiatan/create"class="btn btn-success float-right btn-sm">Kembali</a>  
+
     @foreach ($data_kategorikeg as $data)
     <div class="modal fade" id="hapus{{ $data->id}}">
         <div class="modal-dialog modal-sm">
