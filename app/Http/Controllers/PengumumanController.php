@@ -70,11 +70,13 @@ class PengumumanController extends Controller
         if (!$this -> Pengumuman->detailData($id)){
             abort(404);
         }
+        $kat_peng = DB::table('kategoripengumuman')->get();
         $peng = [
             'kategori'=> $this -> Kategoripengumuman->allData(),
         ];
         $data = [
-            'data_pengumuman'=> $this -> Pengumuman->detailData($id),
+            // 'data_pengumuman'=> $this -> Pengumuman->detailData($id),
+            'data_pengumuman'=> $this -> Pengumuman->detailData($id),'data_kategori'=> $kat_peng
         ];
         return view('v_admin.Pengumuman.v_DetailPengumuman',$data,$peng);
     }

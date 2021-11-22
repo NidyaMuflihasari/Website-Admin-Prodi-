@@ -66,11 +66,13 @@ class AkademikController extends Controller
         if (!$this -> Akademik->detailData($id)){
             abort(404);
         }
+        $kat_aka = DB::table('kategoriakademik')->get();
         $aka = [
             'kategori'=> $this -> Kategoriakademik->allData(),
         ];
         $data = [
             'data_akademik'=> $this -> Akademik->detailData($id),
+            'data_kategori'=> $kat_aka
         ];
         return view('v_admin.Akademik.v_DetailAkademik',$data,$aka);
     }

@@ -16,13 +16,11 @@
     <tr>
         <th width="100px">Kategori Kegiatan</th>
         <th width="30px">:</th>
-        @if(($data_kegiatan->kategori_id)==1)
-            <th>Kegiatan Dosen</th>
-        @elseif(($data_kegiatan->kategori_id)==2)
-            <th>Kegiatan Mahasiswa</th>
-        @elseif(($data_kegiatan->kategori_id)==3)
-            <th>Kegiatan Lomba</th>
+        @foreach ($data_kategori as $kategori_DB)
+        @if($data_kegiatan->kategori_id == $kategori_DB->id)
+            <td>{{ $kategori_DB->kategori }}</td>
         @endif
+    @endforeach
     </tr>
     <tr>
         <th width="100px">Deskripsi Kegiatan</th>

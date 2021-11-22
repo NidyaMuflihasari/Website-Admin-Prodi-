@@ -11,17 +11,11 @@
     <tr>
         <th width="100px">Kategori Pengumuman</th>
         <th width="30px">:</th>
-        @if(($data_pengumuman->kategori_id)==1)
-            <th>Jadwal BRS</th>
-        @elseif(($data_pengumuman->kategori_id)==2)
-            <th>Jadwal Kuliah</th>
-        @elseif(($data_pengumuman->kategori_id)==3)
-            <th>Jadwal UTS</th>
-        @elseif(($data_pengumuman->kategori_id)==4)
-            <th>Jadwal UAS</th>
-        @elseif(($data_pengumuman->kategori_id)==5)
-            <th>Kegiatan Perkuliahan</th>
-        @endif
+        @foreach ($data_kategori as $kategori_DB)
+            @if($data_pengumuman->kategori_id == $kategori_DB->id)
+                <td>{{ $kategori_DB->kategori }}</td>
+            @endif
+        @endforeach
     </tr>
     <tr>
         <th width="100px">File Pengumuman</th>

@@ -11,13 +11,11 @@
     <tr>
         <th width="100px">Kategori Akademik</th>
         <th width="30px">:</th>
-        @if(($data_akademik->kategori_id)==1)
-            <th>Kalender Akademik</th>
-        @elseif(($data_akademik->kategori_id)==2)
-            <th>Panduan Akademik</th>
-        @elseif(($data_akademik->kategori_id)==3)
-            <th>Kurikulum Prodi</th>
-        @endif
+        @foreach ($data_kategori as $kategori_DB)
+            @if($data_akademik->kategori_id == $kategori_DB->id)
+                <td>{{ $kategori_DB->kategori }}</td>
+            @endif
+        @endforeach
     </tr>
     <tr>
         <th width="100px">File Akademik</th>

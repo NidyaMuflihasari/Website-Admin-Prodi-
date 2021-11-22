@@ -76,11 +76,13 @@ class KegiatanController extends Controller
         if (!$this -> Kegiatan->detailData($id)){
             abort(404);
         }
+        $kat_keg = DB::table('kategorikegiatan')->get();
         $keg = [
             'kategori'=> $this -> Kategorikegiatan->allData(),
         ];
         $data = [
             'data_kegiatan'=> $this -> Kegiatan->detailData($id),
+            'data_kategori'=> $kat_keg
         ];
         return view('v_admin.Kegiatan.v_DetailKegiatan',$data,$keg);
     }
