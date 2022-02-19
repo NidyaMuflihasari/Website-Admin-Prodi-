@@ -29,7 +29,7 @@
                 <tr>
                     <td>{{ $no++ }}</td>
                     <td>{{ $data->nama_kegiatan }}</td>
-                    <td>{{ date('d-m-yy', strtotime($data->waktu_kegiatan))}}</td>
+                    <td>{{ date('d-m-y', strtotime($data->waktu_kegiatan))}}</td>
                     @foreach ($data_kategori as $kategori_DB)
                         @if($data->kategori_id == $kategori_DB->id)
                           <td>{{ $kategori_DB->kategori }}</td>
